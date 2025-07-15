@@ -1,0 +1,8 @@
+.about {
+  display: flex; flex-direction: column;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 80px auto;
+  font-weight: 300;
+}

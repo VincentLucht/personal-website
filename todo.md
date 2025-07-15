@@ -1,0 +1,4 @@
+- fix wiggle no working
+- fix mismatch between ts and js logo
+- remove unused icons
+- slightly reduce header height on mobile
