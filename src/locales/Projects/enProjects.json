@@ -1,6 +1,7 @@
 {
   "projects": "Projects",
   "hover": "Hover for details",
+  "hoverMobile": "Click for details",
   "reddnirP1": "Reddnir is a Reddit-like community based social media platform I built as my final project for",
   "reddnirP2": ". This comprehensive full stack application features communities, moderation tools, posts, comments, chats, and much more. A React frontend and Node REST API backend power this project, fully built with TypeScript. Advanced features like pagination, virtualization, and a fully responsive design ensure scalability and smooth user interactions. With over 40k+ lines of code, this demonstrates my skills to architect and build complex web applications.",
   "rtmaHeader": "Real-time Messaging App",
