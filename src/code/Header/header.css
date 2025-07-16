@@ -16,7 +16,7 @@ header > div {
   gap: 16px;
 }
 
-header button {
+.header-btn {
   display: flex; align-items: center; justify-content: center;
   height: 38px;
   background: transparent;
@@ -31,12 +31,12 @@ header button {
   font-size: 14px;
 }
 
-header button:hover {
+.header-btn:hover {
   background: var(--primary-blue);
   color: white;
 }
 
-header button:active {
+.header-btn:active {
   background: var(--primary-blue-dark);
   border-color: var(--primary-blue-dark);
 }
