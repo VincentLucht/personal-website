@@ -6,7 +6,7 @@ import CIconSpecial from '@/code/Skills/CIconSpecial';
 
 export default function Skills() {
   const { t } = useTranslation('skills');
-  const { width } = useGetScreenSize();
+  const { width, isDesktop } = useGetScreenSize();
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Skills() {
         </div>
 
         {/* FRONTEND + BACKEND */}
-        <div className="gap-10 df">
+        <div className={`gap-10 df ${!isDesktop ? 'flex-col' : ''}`}>
           <SkillContainer name="Frontend">
             <Icon source="react.svg" />
 
@@ -71,7 +71,7 @@ export default function Skills() {
         <SkillContainer
           name={t('tech&tools')}
           className="w-fit"
-          childrenClassName="grid grid-cols-[repeat(6,1fr)]"
+          childrenClassName={`${width >= 500 ? 'grid grid-cols-[repeat(6,1fr)]' : 'flex flex-wrap'}`}
         >
           <Icon source="vite.png" />
 
@@ -83,7 +83,7 @@ export default function Skills() {
 
           <Icon source="vscode.svg" />
 
-          <Icon source="rest-api.png" />
+          <Icon source="neon.png" />
 
           <Icon source="github.svg" />
 
@@ -91,15 +91,20 @@ export default function Skills() {
 
           <Icon source="render.png" />
 
-          <Icon source="neon.png" />
-
           <Icon source="webpack.png" />
 
           <Icon source="socketIO.png" />
+
+          <Icon source="rest-api.png" />
         </SkillContainer>
 
         {/* REAL LANGUAGES */}
-        <SkillContainer name="" className="!px-6 !py-4" childrenClassName="gap-5">
+        <SkillContainer
+          name=""
+          // 419 is breakpoint
+          className={` ${width <= 419 ? '!px-4 !py-3' : '!px-6 !py-4'}`}
+          childrenClassName="gap-5"
+        >
           <div className="flex items-center">
             <span>I speak</span>
 
