@@ -30,6 +30,11 @@
   .project-container-reverse {
     grid-template-columns: 1fr;
     margin-bottom: 240px;
+    padding: 14px
+  }
+
+  .project-container-reverse {
+    margin-bottom: 120px
   }
 }
 
