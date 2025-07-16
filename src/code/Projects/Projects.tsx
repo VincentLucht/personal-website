@@ -1,5 +1,5 @@
 import '@/code/Projects/projects.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import useGetScreenSize from '@/code/hooks/useGetScreenSize';
 import Icon from '@/code/Skills/Icon';
@@ -7,15 +7,36 @@ import Icon from '@/code/Skills/Icon';
 export default function Projects() {
   const { t } = useTranslation('projects');
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const { isDesktop } = useGetScreenSize();
 
-  const handleMouseEnter = (projectId: string) => setHoveredProject(projectId);
-  const handleMouseLeave = () => setHoveredProject(null);
+  const { isDesktop, width } = useGetScreenSize();
+
+  const isMobile = width <= 768;
+
+  const handleMouseEnter = (projectId: string) => {
+    if (isMobile) return;
+    setHoveredProject(projectId);
+  };
+  const handleMouseLeave = () => {
+    if (isMobile) return;
+    setHoveredProject(null);
+  };
+
+  const handleMobileClick = (projectId: string) => {
+    setHoveredProject((prev) => (prev === projectId ? null : projectId));
+  };
+
+  useEffect(() => {
+    if (isMobile) {
+      setHoveredProject(null);
+    }
+  }, [isMobile]);
 
   return (
     <div id="projects">
       <h2 className="mt-48 header">{t('projects')}</h2>
-      <p className="-mt-4 mb-10 text-center text-gray-secondary">{t('hover')}</p>
+      <p className="-mt-4 mb-10 text-center text-gray-secondary">
+        {isMobile ? t('hoverMobile') : t('hover')}
+      </p>
 
       <div className="project-wrapper">
         {/* REDDNIR */}
@@ -57,12 +78,22 @@ export default function Projects() {
             </div>
 
             <a
-              target="_blank"
-              href="https://project-odin-book-mocha.vercel.app"
+              {...(isMobile
+                ? {
+                    onClick: (e) => {
+                      e.preventDefault();
+                      handleMobileClick('reddnir');
+                    },
+                  }
+                : {
+                    target: '_blank',
+                    href: 'https://project-odin-book-mocha.vercel.app',
+                  })}
               rel="noreferrer"
+              style={isMobile ? { pointerEvents: 'none' } : {}}
             >
               <div
-                className="video-container"
+                className={`video-container ${isMobile ? 'cursor-pointer' : ''}`}
                 onMouseEnter={() => handleMouseEnter('reddnir')}
                 onMouseLeave={handleMouseLeave}
               >
@@ -97,12 +128,22 @@ export default function Projects() {
         <div>
           <div className="project-container-reverse">
             <a
-              target="_blank"
-              href="https://project-messaging-app-fawn.vercel.app/login"
+              {...(isMobile
+                ? {
+                    onClick: (e) => {
+                      e.preventDefault();
+                      handleMobileClick('messaging');
+                    },
+                  }
+                : {
+                    target: '_blank',
+                    href: 'https://project-messaging-app-fawn.vercel.app/login',
+                  })}
               rel="noreferrer"
+              style={isMobile ? { pointerEvents: 'none' } : {}}
             >
               <div
-                className="video-container"
+                className={`video-container ${isMobile ? 'cursor-pointer' : ''}`}
                 onMouseEnter={() => handleMouseEnter('messaging')}
                 onMouseLeave={handleMouseLeave}
               >
@@ -191,12 +232,22 @@ export default function Projects() {
             </div>
 
             <a
-              target="_blank"
-              href="https://project-battleship-vite.vercel.app"
+              {...(isMobile
+                ? {
+                    onClick: (e) => {
+                      e.preventDefault();
+                      handleMobileClick('battleship');
+                    },
+                  }
+                : {
+                    target: '_blank',
+                    href: 'https://project-battleship-vite.vercel.app',
+                  })}
               rel="noreferrer"
+              style={isMobile ? { pointerEvents: 'none' } : {}}
             >
               <div
-                className="video-container"
+                className={`video-container ${isMobile ? 'cursor-pointer' : ''}`}
                 onMouseEnter={() => handleMouseEnter('battleship')}
                 onMouseLeave={handleMouseLeave}
               >
