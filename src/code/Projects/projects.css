@@ -38,6 +38,12 @@
   }
 }
 
+@media (max-width: 420px) {
+  .project-container-reverse {
+    margin-top: 300px !important;
+  }
+}
+
 .project-header {
   color: var(--primary-blue);
   font-size: 1.8rem;
