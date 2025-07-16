@@ -1,28 +1,19 @@
 import '@/code/About/about.css';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation('about');
+
   return (
     <div className="mt-32" id="about">
-      <h2 className="header">About Me</h2>
+      <h2 className="header">{t('about')}</h2>
 
       <div className="about">
-        <span>
-          I&apos;m a full stack engineer in Berlin, who enjoys programming and creating
-          complex web applications that are both feature rich and responsive.
-        </span>
+        <span>{t('p1')}</span>
 
-        <span className="my-4">
-          I didn&apos;t know what to do after school, and I&apos;ve always been curious
-          about how coding can create amazing apps out of 0&apos;s and 1&apos;s. After
-          searching around for courses, I kept seeing The Odin Project recommended, so I
-          gave it a try. What started as curiosity quickly became a passion and since
-          then, I&apos;m hooked on programming.
-        </span>
+        <span className="my-4">{t('p2')}</span>
 
-        <span>
-          When I&apos;m not coding, I&apos;m probably doing one of the big 3&apos;s:
-          playing Video Games, playing the Piano, or at the gym. 🎮 🎹 💪
-        </span>
+        <span>{t('p3')}</span>
       </div>
     </div>
   );

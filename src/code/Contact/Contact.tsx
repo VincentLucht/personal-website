@@ -1,8 +1,11 @@
+import '@/code/Contact/contact.css';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import useGetScreenSize from '@/code/hooks/useGetScreenSize';
 import Icon from '@/code/Skills/Icon';
 
 export default function Contact() {
+  const { t } = useTranslation('contact');
   const { isTablet } = useGetScreenSize();
   const [tooltipText, setTooltipText] = useState('📋 Copy to clipboard');
   const [showTooltip, setShowTooltip] = useState(false);
@@ -45,10 +48,11 @@ export default function Contact() {
 
   return (
     <div className="mt-40" id="contact">
-      <h2 className="header">Contact Me</h2>
+      <h2 className="header">{t('contactme')}</h2>
+
       <div className="text-center">
         <div className="flex-col df">
-          <div className="mb-3">Write me an e-mail at:</div>
+          <div className="mb-3">{t('email')}</div>
 
           <div className="group relative w-fit">
             <h3
@@ -72,9 +76,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="my-10 ml-[8px] text-center tracking-[8px]">OR</div>
+        <div className="my-10 ml-[8px] text-center tracking-[8px]">{t('or')}</div>
 
-        <div className="mb-2">See what I&apos;m up to:</div>
+        <div className="mb-2">{t('upto')}</div>
       </div>
       <div className="-ml-2 mb-4 df">
         <a target="_blank" href="https://github.com/VincentLucht" rel="noreferrer">
@@ -106,8 +110,9 @@ export default function Contact() {
         </a>
       </div>
 
-      <div className="text-gray-secondary mb-4 mt-12 text-center">
-        Built with ❤️ by Vincent Lucht © 2025
+      <div className="mb-4 mt-12 text-center text-gray-secondary">
+        {t('builtwith')} <span className="animate-beat">❤️</span>
+        {t('by')} © 2025
       </div>
     </div>
   );

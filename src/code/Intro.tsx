@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Typed from 'typed.js';
 import '@/css/App.css';
 
 export default function Intro() {
   const typedRef = useRef(null);
+  const { t } = useTranslation('intro');
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
@@ -23,11 +25,12 @@ export default function Intro() {
     <div className="mb-[120px] mt-[100px] df">
       <h1 className="flex flex-col text-6xl">
         <div>
-          Hi! <span className="wave">👋</span> I&apos;m Vincent,
+          {t('greeting')} <span className="wave">👋</span> {t('name')}
         </div>
 
         <div className="flex">
-          a <div ref={typedRef} className="ml-3 text-blue-500" id="typed"></div>
+          {t('article')}
+          <div ref={typedRef} className="ml-3 text-blue-500" id="typed"></div>
         </div>
 
         <div>web developer.</div>

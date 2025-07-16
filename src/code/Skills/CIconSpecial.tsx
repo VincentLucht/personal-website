@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Icon from '@/code/Skills/Icon';
 import Typed from 'typed.js';
 
@@ -12,6 +13,8 @@ export default function CIconSpecial() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
+  const { t } = useTranslation('skills');
+
   useEffect(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -20,7 +23,7 @@ export default function CIconSpecial() {
 
     if (isHovered && !typedInstance.current) {
       typedInstance.current = new Typed(typedRef.current!, {
-        strings: ['(CS50x only, no pointers...)'],
+        strings: [t('cjoke')],
         typeSpeed: 25,
         backSpeed: 25,
         showCursor: false,
@@ -33,7 +36,7 @@ export default function CIconSpecial() {
         timeoutRef.current = null;
       }, 200);
     }
-  }, [isHovered]);
+  }, [isHovered, t]);
 
   useEffect(() => {
     return () => {
@@ -53,7 +56,7 @@ export default function CIconSpecial() {
 
         <div
           ref={typedRef}
-          className={`font-caveat absolute top-full mt-1 whitespace-nowrap text-xl transition-opacity
+          className={`absolute top-full mt-1 whitespace-nowrap font-caveat text-xl transition-opacity
             duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
         />
       </div>

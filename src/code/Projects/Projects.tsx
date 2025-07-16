@@ -1,9 +1,11 @@
 import '@/code/Projects/projects.css';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import useGetScreenSize from '@/code/hooks/useGetScreenSize';
 import Icon from '@/code/Skills/Icon';
 
 export default function Projects() {
+  const { t } = useTranslation('projects');
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const { isDesktop } = useGetScreenSize();
 
@@ -12,8 +14,8 @@ export default function Projects() {
 
   return (
     <div id="projects">
-      <h2 className="header mt-48">Projects</h2>
-      <p className="text-gray-secondary -mt-4 mb-10 text-center">Hover for details</p>
+      <h2 className="mt-48 header">{t('projects')}</h2>
+      <p className="-mt-4 mb-10 text-center text-gray-secondary">{t('hover')}</p>
 
       <div className="project-wrapper">
         {/* REDDNIR */}
@@ -23,8 +25,7 @@ export default function Projects() {
               <h3 className="project-header">Reddnir</h3>
 
               <div className="project-text">
-                Reddnir is a Reddit-like community based social media platform I built
-                as my final project for
+                {t('reddnirP1')}
                 <a
                   target="_blank"
                   href="https://www.theodinproject.com"
@@ -33,20 +34,15 @@ export default function Projects() {
                   {' '}
                   The Odin Project
                 </a>
-                . This comprehensive full stack application features communities,
-                moderation tools, posts, comments, chats, and much more. A React
-                frontend and Node REST API power this project, fully built with
-                TypeScript. Advanced features like pagination, virtualization, and a
-                fully responsive design ensure scalability and smooth user interactions.
-                With over 40k+ lines of code, this demonstrates my skills to architect
-                and build complex web applications.
+                {t('reddnirP2')}
+
                 <div className="link-btn-container">
                   <a
                     target="_blank"
                     href="https://project-odin-book-mocha.vercel.app"
                     rel="noreferrer"
                   >
-                    Visit deployed project
+                    {t('visit1')}
                   </a>
 
                   <a
@@ -54,7 +50,7 @@ export default function Projects() {
                     href="https://github.com/VincentLucht/project-odin-book"
                     rel="noreferrer"
                   >
-                    View Code
+                    {t('code')}
                   </a>
                 </div>
               </div>
@@ -67,13 +63,13 @@ export default function Projects() {
                 onMouseLeave={handleMouseLeave}
               >
                 <video className="showcase-video" autoPlay loop muted playsInline>
-                  <source src="reddnir-placeholder.png" type="video/mp4" />
+                  <source src="reddnir.mp4" type="video/mp4" />
                 </video>
 
                 <div
                   className={`project-hover-content ${hoveredProject === 'reddnir' ? 'visible' : ''}`}
                 >
-                  <h4 className="tech-used">Built with:</h4>
+                  <h4 className="tech-used">{t('built')}</h4>
 
                   <div className="flex flex-wrap items-center gap-3">
                     <Icon source="tsx.svg" />
@@ -113,7 +109,7 @@ export default function Projects() {
                 <div
                   className={`project-hover-content reverse ${hoveredProject === 'messaging' ? 'visible' : ''}`}
                 >
-                  <h4 className="tech-used">Built with:</h4>
+                  <h4 className="tech-used">{t('built')}</h4>
 
                   <div className="flex flex-wrap items-center gap-3">
                     <Icon source="tsx.svg" />
@@ -132,15 +128,11 @@ export default function Projects() {
             </a>
 
             <div>
-              <h3 className="project-header">Real time messaging app</h3>
+              <h3 className="project-header">{t('rtmaHeader')}</h3>
 
               <div className="project-text">
-                A comprehensive real-time messaging application built with Socket.IO
-                that delivers instant communication and updates. Features both
-                one-on-one and group conversations with seamless real-time updates, chat
-                management capabilities, and customizable user profiles. This full stack
-                application combines a React frontend with a Node.js REST API and a HTTP
-                server to enable real-time interactions across all messaging features!
+                {t('rtma')}
+
                 <div
                   className={`link-btn-container ${isDesktop ? '!justify-start' : ''}`}
                 >
@@ -149,7 +141,7 @@ export default function Projects() {
                     href="https://project-messaging-app-fawn.vercel.app/login"
                     rel="noreferrer"
                   >
-                    View live project
+                    {t('visit2')}
                   </a>
 
                   <a
@@ -157,7 +149,7 @@ export default function Projects() {
                     href="https://github.com/VincentLucht/project-messaging-app"
                     rel="noreferrer"
                   >
-                    View Code
+                    {t('code')}
                   </a>
                 </div>
               </div>
@@ -172,18 +164,15 @@ export default function Projects() {
               <h3 className="project-header">Battleship</h3>
 
               <div className="project-text">
-                One of my first projects! Built with pure JavaScript and manual DOM
-                manipulation, featuring local multiplayer and a smart AI opponent. The
-                game translates nested array logic into an interactive GUI,
-                demonstrating core programming fundamentals without any frameworks like
-                React.
+                {t('battleship')}
+
                 <div className="link-btn-container">
                   <a
                     target="_blank"
                     href="https://project-battleship-vite.vercel.app"
                     rel="noreferrer"
                   >
-                    Try it out
+                    {t('visit3')}
                   </a>
 
                   <a
@@ -191,7 +180,7 @@ export default function Projects() {
                     href="https://github.com/VincentLucht/Project-Battleship/tree/main"
                     rel="noreferrer"
                   >
-                    View Code
+                    {t('code')}
                   </a>
                 </div>
               </div>
@@ -214,10 +203,10 @@ export default function Projects() {
                 <div
                   className={`project-hover-content ${hoveredProject === 'battleship' ? 'visible' : ''}`}
                 >
-                  <h4 className="tech-used">Built with:</h4>
+                  <h4 className="tech-used">{t('built')}</h4>
 
                   <div className="flex flex-wrap items-center gap-3">
-                    <Icon source="javascript.png" />
+                    <Icon source="javascript.png" imgClassName="rounded-[4px]" />
                     <Icon source="html.svg" />
                     <Icon source="css.svg" />
                     <Icon source="jest.png" />

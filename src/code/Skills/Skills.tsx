@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import useGetScreenSize from '@/code/hooks/useGetScreenSize';
 import SkillContainer from '@/code/Skills/SkillContainer';
 import Icon from '@/code/Skills/Icon';
 import CIconSpecial from '@/code/Skills/CIconSpecial';
 
 export default function Skills() {
+  const { t } = useTranslation('skills');
   const { width } = useGetScreenSize();
 
   return (
@@ -15,8 +17,8 @@ export default function Skills() {
       <div className="flex-col gap-10 df">
         {/* LANGUAGES */}
         <div className="flex gap-4">
-          <SkillContainer name="Languages" className="w-fit">
-            <Icon source="javascript.png" />
+          <SkillContainer name={t('languages')} className="w-fit">
+            <Icon source="javascript.png" imgClassName="rounded-[4px]" />
 
             <Icon source="typescript.png" />
 
@@ -67,7 +69,7 @@ export default function Skills() {
 
         {/* TOOLS AND TECHNOLOGIES */}
         <SkillContainer
-          name="Technologies and Tools"
+          name={t('tech&tools')}
           className="w-fit"
           childrenClassName="grid grid-cols-[repeat(6,1fr)]"
         >
