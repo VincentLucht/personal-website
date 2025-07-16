@@ -1,0 +1,14 @@
+{
+  "projects": "Projects",
+  "hover": "Hover for details",
+  "reddnirP1": "Reddnir is a Reddit-like community based social media platform I built as my final project for",
+  "reddnirP2": ". This comprehensive full stack application features communities, moderation tools, posts, comments, chats, and much more. A React frontend and Node REST API backend power this project, fully built with TypeScript. Advanced features like pagination, virtualization, and a fully responsive design ensure scalability and smooth user interactions. With over 40k+ lines of code, this demonstrates my skills to architect and build complex web applications.",
+  "rtmaHeader": "Real-time Messaging App",
+  "rtma": "A real-time messaging application built with Socket.IO that delivers instant communication and updates. Features both one-on-one and group conversations with seamless real-time updates, chat management capabilities, and customizable user profiles. This full stack application combines a responsive React frontend with a Node.js REST API and a Socket.IO HTTP server to enable real-time interactions across all messaging features!",
+  "battleship": "One of my first projects! Built with pure JavaScript and manual DOM manipulation, featuring local multiplayer and a smart AI opponent. The game translates nested array logic into an interactive GUI, demonstrating core programming fundamentals without any frameworks like React.",
+  "visit1": "Visit deployed project",
+  "visit2": "View live project",
+  "visit3": "Try it out",
+  "code": "View code",
+  "built": "Built with:"
+}

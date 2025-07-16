@@ -1,0 +1,14 @@
+{
+  "projects": "Projekte",
+  "hover": "Hover für Details",
+  "reddnirP1": "Reddnir ist eine Reddit-ähnliche community basierte Social Media Plattform, die ich als mein finales Projekt für",
+  "reddnirP2": " gebaut habe. Diese umfassende Full-Stack-App umfasst Communities, Moderation Tools, Posts, Kommentare, Chats, und vieles mehr. Ein React frontend und Node REST API backend treiben dieses Projekt an, vollständig entwickelt mit TypeScript. Fortgeschrittene Features wie Pagination, Virtualisation und ein völlig responsives Design gewährleisten Skalierbarkeit und ermöglichen flüssige Benutzerinteraktionen. Mit über 40.000+ Zeilen Code, demonstriert dies meine Fähigkeit eine komplexe Web App zu entwerfen und bauen.",
+  "rtmaHeader": "Echtzeit Messaging App",
+  "rtma": "Eine echtzeit Messaging App, gebaut mit Socket.IO, welche eine direkte Kommunikation und Updates ermöglicht. Es verfügt über Einzel- und Gruppenchats mit echtzeit Updates, Chat Management und anpassbaren Benutzerprofilen. Diese Full-Stack-App kombiniert ein responsives React frontend mit einem Node.js REST API und einem Socket.IO HTTP server um echtzeit Interaktion für alle Features zu ermöglichen.",
+  "battleship": "Eines meiner ersten Projekte! Gebaut mit purem JavaScript und manueller DOM Manipulation, es enthält einen lokalen Multiplayer und einen intelligenten KI Gegner. Das Spiel übersetzt nested Array Logik in ein interaktives GUI und demonstriert meine grundlegenden Programmierfähigkeiten ohne irgendwelche Frameworks wie React.",
+  "visit1": "Projekt besuchen",
+  "visit2": "Live Projekt ansehen",
+  "visit3": "Probier es aus",
+  "code": "Code ansehen",
+  "built": "Erstellt mit:"
+}
