@@ -56,7 +56,11 @@ export default function Projects() {
               </div>
             </div>
 
-            <a target="_blank" href="https://www.theodinproject.com" rel="noreferrer">
+            <a
+              target="_blank"
+              href="https://project-odin-book-mocha.vercel.app"
+              rel="noreferrer"
+            >
               <div
                 className="video-container"
                 onMouseEnter={() => handleMouseEnter('reddnir')}
