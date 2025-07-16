@@ -32,7 +32,7 @@ export const iconConfig: IconConfigMap = {
   'rest-api.png': {
     alt: "Rest Api's",
     tooltip: "Rest Api's",
-    className: '',
+    className: 'bg-white',
   },
   'html.svg': {
     alt: 'HTML',
