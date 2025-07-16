@@ -1,0 +1,21 @@
+.heart {
+  font-size: 1em;
+}
+
+.animate-beat {
+  display: inline-block;
+  margin-left: 3px; margin-right: 4px;
+  animation: beat 2s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
