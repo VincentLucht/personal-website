@@ -1,5 +1,7 @@
 header {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
   padding: 16px 16px 16px 16px;
   position: sticky;
   top: 0;
@@ -7,9 +9,10 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 40px;
-  margin-top: -16px; margin-left: -16px; margin-right: -16px;
+  margin-top: -16px; 
+  margin-left: -16px; 
+  margin-right: -16px;
 }
-
 
 header > div {
   display: flex;
@@ -17,7 +20,9 @@ header > div {
 }
 
 .header-btn {
-  display: flex; align-items: center; justify-content: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   height: 38px;
   background: transparent;
   border: 2px solid var(--primary-blue);
@@ -39,4 +44,139 @@ header > div {
 .header-btn:active {
   background: var(--primary-blue-dark);
   border-color: var(--primary-blue-dark);
+}
+
+header {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 16px 16px 16px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 40px;
+  margin-top: -16px; 
+  margin-left: -16px; 
+  margin-right: -16px;
+}
+
+header > div {
+  display: flex;
+  gap: 16px;
+}
+
+.header-btn {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  height: 38px;
+  background: transparent;
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.header-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.header-btn:active {
+  background: var(--primary-blue-dark);
+  border-color: var(--primary-blue-dark);
+}
+
+/* Hamburger menu */
+.mobile-menu-container {
+  position: relative;
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: all 0.3s ease;
+  transform-origin: 1px;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  min-width: 150px;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  margin-top: 10px
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.mobile-menu-btn:hover {
+  background: var(--primary-blue);
+  color: var(--text-primary);
+}
+
+.mobile-menu-btn:active {
+  background: var(--primary-blue-dark);
 }
