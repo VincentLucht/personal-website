@@ -1,5 +1,5 @@
 # Portfolio Website
-A modern, responsive portfolio website showcasing my development projects and skills.
+A modern, responsive portfolio website showcasing my development projects and skills!
 
 ## Links
 - [Live Project](https://vincentlucht.vercel.app)
