@@ -7,7 +7,7 @@ Eine moderne, responsive Portfolio Website, die meine Entwicklungsprojekte und F
 ## ✨ Features
 - 🌎 Sprachwechsel zwischen Englisch und Deutsch
 - 📱 Vollständig responsives Design (bis zu 360px)
-- 🎨 Schlankes Styling und Layout
+- 🎨 Cleanes Design und Layout
 - 🚀 Präsentiert alle Capstone-Projekte
 - ⚡️ Schnelles Laden mit Vite
 
