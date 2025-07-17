@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/VincentLucht/personal-website/blob/main/README.md)
+[![de](https://img.shields.io/badge/lang-de-blue.svg)](https://github.com/VincentLucht/personal-website/blob/main/README.de.md)
+
 # Portfolio Website
 A modern, responsive portfolio website showcasing my development projects and skills!
 
