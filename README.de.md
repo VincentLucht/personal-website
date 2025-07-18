@@ -1,8 +1,9 @@
 # Portfolio Website
 Eine moderne, responsive Portfolio Website, die meine Entwicklungsprojekte und Fähigkeiten präsentiert!
 
-## Links
+## 🔗 Links
 - [Live Projekt](https://vincentlucht.vercel.app)
+[Demo](./public/demo.gif)
 
 ## ✨ Features
 - 🌎 Sprachwechsel zwischen Englisch und Deutsch
