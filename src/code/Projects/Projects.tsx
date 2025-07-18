@@ -214,7 +214,7 @@ export default function Projects() {
                 <div className="link-btn-container">
                   <a
                     target="_blank"
-                    href="https://project-battleship-vite.vercel.app"
+                    href="https://battleship-vl.vercel.app"
                     rel="noreferrer"
                   >
                     {t('visit3')}
@@ -241,7 +241,7 @@ export default function Projects() {
                   }
                 : {
                     target: '_blank',
-                    href: 'https://project-battleship-vite.vercel.app',
+                    href: 'https://battleship-vl.vercel.app',
                   })}
               rel="noreferrer"
               style={isMobile ? { pointerEvents: 'none' } : {}}
