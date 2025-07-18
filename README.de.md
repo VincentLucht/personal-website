@@ -11,5 +11,5 @@ Eine moderne, responsive Portfolio Website, die meine Entwicklungsprojekte und F
 - 🚀 Präsentiert alle Capstone-Projekte
 - ⚡️ Schnelles Laden mit Vite
 
-## Tech Stack
+## ⚡️ Tech Stack
 [![Tech Stack](https://skillicons.dev/icons?i=ts,react,tailwind,vite)](https://skillicons.dev)

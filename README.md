@@ -14,5 +14,5 @@ A modern, responsive portfolio website showcasing my development projects and sk
 - 🚀 Showcases all capstone projects
 - ⚡️ Fast loading with Vite
 
-## Tech Stack
+## ⚡️ Tech Stack
 [![Tech Stack](https://skillicons.dev/icons?i=ts,react,tailwind,vite)](https://skillicons.dev)
