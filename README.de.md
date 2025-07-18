@@ -3,7 +3,7 @@ Eine moderne, responsive Portfolio Website, die meine Entwicklungsprojekte und F
 
 ## 🔗 Links
 - [Live Projekt](https://vincentlucht.vercel.app)
-[Demo](./public/demo.gif)
+![Demo](./public/demo.gif)
 
 ## ✨ Features
 - 🌎 Sprachwechsel zwischen Englisch und Deutsch

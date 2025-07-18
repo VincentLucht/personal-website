@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my development projects and sk
 
 ## 🔗 Links
 - [Live Project](https://vincentlucht.vercel.app)
-[Demo](./public/demo.gif)
+![Demo](./public/demo.gif)
 
 ## ✨ Features
 - 🌎 Language switching between English and German
