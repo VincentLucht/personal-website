@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import useGetScreenSize from '@/code/hooks/useGetScreenSize';
 import SkillContainer from '@/code/Skills/SkillContainer';
 import Icon from '@/code/Skills/Icon';
-import CIconSpecial from '@/code/Skills/CIconSpecial';
+// import CIconSpecial from '@/code/Skills/CIconSpecial';
 
 export default function Skills() {
   const { t } = useTranslation('skills');
@@ -31,7 +31,7 @@ export default function Skills() {
             <Icon source="sql.svg" />
           </SkillContainer>
 
-          {width >= 820 && (
+          {/* {width >= 820 && (
             <div className="relative ml-4 pt-20">
               <CIconSpecial />
 
@@ -41,7 +41,7 @@ export default function Skills() {
                 className="absolute left-[60px] top-[103px] h-6 w-6 rotate-[30deg] invert"
               />
             </div>
-          )}
+          )} */}
         </div>
 
         {/* FRONTEND + BACKEND */}
