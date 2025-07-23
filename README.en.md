@@ -7,7 +7,7 @@ A modern, responsive portfolio website showcasing my projects and skills!
 ## 🔗 Links
 - [Live Project](https://vincentlucht.vercel.app)
 
-## Demo
+## 🚀 Demo
 ![Demo](./public/demo.gif)
 
 ## ✨ Features
